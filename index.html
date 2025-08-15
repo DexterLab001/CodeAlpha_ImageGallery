@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="title-section">
+                    <h1 class="gallery-title">Gallery</h1>
+                    <span class="image-count">24 images</span>
+                </div>
+                <!--
+                <div class="header-controls">
+                    <button class="control-btn" id="searchBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <button class="control-btn active" id="gridBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                    </button>
+                    <button class="control-btn" id="listBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="8" y1="6" x2="21" y2="6"></line>
+                            <line x1="8" y1="12" x2="21" y2="12"></line>
+                            <line x1="8" y1="18" x2="21" y2="18"></line>
+                            <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                            <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                            <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                        </svg>
+                    </button>
+                </div> -->
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <nav class="filter-nav">
+                <button class="filter-btn active" data-filter="all">All Images (24)</button>
+                <button class="filter-btn" data-filter="nature">Nature (8)</button>
+                <button class="filter-btn" data-filter="architecture">Architecture (6)</button>
+                <button class="filter-btn" data-filter="abstract">Abstract (4)</button>
+                <button class="filter-btn" data-filter="travel">Travel (6)</button>
+            </nav>
+
+            <div class="gallery-grid" id="galleryGrid">
+            </div>
+
+            <div class="load-more-section">
+                <button class="load-more-btn">Load More Images</button>
+            </div>
+        </div>
+    </main>
+
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            
+            <button class="lightbox-nav lightbox-prev" id="lightboxPrev">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15,18 9,12 15,6"></polyline>
+                </svg>
+            </button>
+            
+            <button class="lightbox-nav lightbox-next" id="lightboxNext">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9,18 15,12 9,6"></polyline>
+                </svg>
+            </button>
+
+            <div class="lightbox-image-container">
+                <img class="lightbox-image" id="lightboxImage" src="" alt="">
+                <div class="lightbox-info">
+                    <h3 class="lightbox-title" id="lightboxTitle"></h3>
+                    <p class="lightbox-category" id="lightboxCategory"></p>
+                    <div class="lightbox-counter">
+                        <span id="lightboxCounter">1 of 24</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
