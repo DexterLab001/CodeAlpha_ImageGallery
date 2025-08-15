@@ -13,3 +13,4 @@ It features category-based filtering, a lightbox view with navigation, and smoot
 - **Load More Button** – Placeholder for future server-side image loading.
 
 ---
+VISIT - https://dexterlab001.github.io/CodeAlpha_ImageGallery/
